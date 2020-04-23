@@ -1,0 +1,111 @@
+LEARNING_RATE = 1e-2
+MAX_ITERATIONS = 900
+weights_TV = 0e-4
+weights_untarget = 0.62
+weights_PEAK = 0.72
+EARLY_STOP_PATIENCE = 300
+
+591
+untarget
+Rank 1:	0.000000, Rank 5:	0.000000, Rank 10:	0.000000
+mAP:	0.093969
+target
+Rank 1:	0.000000, Rank 5:	0.076923, Rank 10:	0.153846
+mAP:	0.150967
+
+=============
+591
+weights_untarget = 0.4
+weights_PEAK = 0.5
+EARLY_STOP_PATIENCE = 300
+
+(880, [24.42386, 12.845634, 0.0, 1.6208756, -20.096045])
+untarget
+Rank 1:	1.000000, Rank 5:	1.000000, Rank 10:	1.000000
+mAP:	0.910201
+target
+Rank 1:	0.000000, Rank 5:	0.461538, Rank 10:	0.769231
+mAP:	0.315294
+=================
+591
+weights_untarget = 0.5
+weights_PEAK = 0.5
+EARLY_STOP_PATIENCE = 300
+(889, [23.248924, 11.569811, 0.0, 1.5814492, -18.254744])
+
+untarget
+Rank 1:	0.307692, Rank 5:	0.769231, Rank 10:	0.846154
+mAP:	0.479055
+target
+Rank 1:	0.153846, Rank 5:	0.384615, Rank 10:	0.769231
+mAP:	0.281715
+=================
+591
+(1147, [23.864872, 11.357586, 0.0, 1.5709418, -18.587303])
+weights_untarget = 0.52
+weights_PEAK = 0.4
+EARLY_STOP_PATIENCE = 300
+
+untarget
+Rank 1:	0.076923, Rank 5:	0.384615, Rank 10:	0.692308
+mAP:	0.337383
+target
+Rank 1:	0.461538, Rank 5:	0.538462, Rank 10:	0.538462
+mAP:	0.441884
+
+batch_size=20（1200轮）
+(1180, [29.210163, 14.091179, 0.0, 1.5742233, -22.512442])
+untarget
+Rank 1:	0.615385, Rank 5:	0.769231, Rank 10:	0.846154
+mAP:	0.447363
+target
+Rank 1:	0.153846, Rank 5:	0.461538, Rank 10:	0.692308
+mAP:	0.283878
+
+接上结果，再训练1200轮
+(1040, [30.285143, 14.1893425, 0.0, 1.6064167, -23.549252])
+untarget
+Rank 1:	0.461538, Rank 5:	0.538462, Rank 10:	0.692308
+mAP:	0.375894
+target
+Rank 1:	0.384615, Rank 5:	0.615385, Rank 10:	0.692308
+mAP:	0.434406
+
+(931, [24.650387, 11.449141, 0.0, 1.6018872, -19.33759])
+untarget
+Rank 1:	0.250000, Rank 5:	0.500000, Rank 10:	0.500000
+mAP:	0.322527
+target
+Rank 1:	0.666667, Rank 5:	0.750000, Rank 10:	0.916667
+mAP:	0.545316
+
+=================
+591
+weights_untarget = 0.62
+weights_PEAK = 0.4
+EARLY_STOP_PATIENCE = 300
+(1162, [22.702587, 10.123799, 0.0, 1.5263441, -17.03637])
+
+untarget
+Rank 1:	0.000000, Rank 5:	0.076923, Rank 10:	0.153846
+mAP:	0.127970
+target
+Rank 1:	0.076923, Rank 5:	0.384615, Rank 10:	0.538462
+mAP:	0.248762
+====================
+591
+weights_untarget = 0.56
+weights_PEAK = 0.6
+EARLY_STOP_PATIENCE = 300
+(1102, [22.941689, 10.93006, 0.0, 1.5550865, -17.753906])
+
+untarget
+Rank 1:	0.076923, Rank 5:	0.384615, Rank 10:	0.615385
+mAP:	0.214581
+target
+Rank 1:	0.076923, Rank 5:	0.307692, Rank 10:	0.461538
+mAP:	0.245689
+====================
+
+
+

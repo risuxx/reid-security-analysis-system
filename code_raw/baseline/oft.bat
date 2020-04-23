@@ -1,0 +1,1 @@
+E: && cd E:\PycharmProjects\cvpr 2018\exp\rank-reid\baseline && python train.py && python evaluate.py && cd E:\PycharmProjects\cvpr 2018\exp\rank-reid\pretrain && python pair_train.py && python eval.py
