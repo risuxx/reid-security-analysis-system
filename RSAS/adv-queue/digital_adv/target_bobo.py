@@ -134,7 +134,7 @@ EARLY_STOP_PATIENCE = 300
 #img1,img2表示用来计算adv用的集合.读入的是未resize，未preprocess的图像
 #img1,img2是pair对，表示同一个人不同C下的pair
 #trans1表示img1每张图相对a0的transform集合；同理trans2
-def adv(graph, net, mask, generator, batch_size, res):
+def adv(graph, net, mask, generator, batch_size, res, adv_index, adv_path):
 
     #初始化噪声出纯色（目前是灰色）
     #modifier = np.ones((550,220,3),dtype=np.float32)*(-1)
@@ -212,6 +212,7 @@ def adv(graph, net, mask, generator, batch_size, res):
     best_dist = 0
     best_epoch = 0
     best_noise = None
+    tmp_noise = None
 
     with tf.Session(graph=graph) as sess:
         sess.run(init)
@@ -230,6 +231,16 @@ def adv(graph, net, mask, generator, batch_size, res):
 
             if iteration % 10 == 0:
                 print(iteration, [dist1_np+dist2_np, dist3_np, tv_np, peak_np, total_loss_np])
+
+            if iteration % 50 == 0:# 每隔50次保存一次adv结果
+                tmp_noise = sess.run(noise)
+                trans_all = np.load(os.path.join(mask_path, 'transforms.npy'))
+                # load imgs, infos, trans of adv and targets
+                img_names = sorted(os.listdir(probe_path))
+                imgs, infos = load_raw(probe_path, img_names)
+                save_adv(adv_index, imgs, trans_all, mask, tmp_noise, img_names, adv_path)
+                res.put("the adv have been saved")
+
 
             if dist1_np+dist2_np-dist3_np > best_dist:
                 best_dist = dist1_np+dist2_np-dist3_np
@@ -283,7 +294,7 @@ def attack(graph, res, net, probe_path, mask_path, adv_path, noise_path,
     #load mask
     mask = np.load(os.path.join(mask_path, str(adv_id)+'.npy'))
 
-    noise = adv(graph, net, mask, generator, batch_size, res)
+    noise = adv(graph, net, mask, generator, batch_size, res, adv_index, adv_path)
     np.save(os.path.join(noise_path, '{}to{}_noise.npy'.format(adv_id, target_id)), noise)
 
     '''
