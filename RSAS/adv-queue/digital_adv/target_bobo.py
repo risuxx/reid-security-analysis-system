@@ -250,7 +250,7 @@ def adv(graph, net, mask, generator, batch_size, res, adv_index, adv_path):
                 log = (iteration, [dist1_np + dist2_np, dist3_np, tv_np, peak_np, total_loss_np])
             elif iteration - best_epoch > EARLY_STOP_PATIENCE:
                 break
-        print(log)
+        # print(log)
 
     return best_noise
 
