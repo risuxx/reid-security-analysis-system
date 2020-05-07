@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f04aaaad-e488-428e-b4a6-2492aec4c015" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/img/adv_affine/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/rectangle.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/jquery.eeyellow.Timeline.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/jquery.eeyellow.Timeline.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1b1rRNGfs97352oNrCMX7Z4zygw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\桌面\学科\论文\信安大赛\信安2020.1.17\reid-security-analysis-system\RSAS\WebStorm_html\img" />
+      <recent name="E:\桌面\学科\论文\信安大赛\信安2020.1.17\reid-security-analysis-system\RSAS\WebStorm_html\img\adv_affine" />
+      <recent name="E:\桌面\学科\论文\信安大赛\信安2020.1.17\reid-security-analysis-system\RSAS\WebStorm_html" />
+      <recent name="E:\桌面\学科\论文\信安大赛\信安2020.1.17\reid-security-analysis-system\RSAS\WebStorm_html\js" />
+      <recent name="E:\桌面\学科\论文\信安大赛\信安2020.1.17\reid-security-analysis-system\RSAS\WebStorm_html\css" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f04aaaad-e488-428e-b4a6-2492aec4c015" name="Default Changelist" comment="" />
+      <created>1587810434002</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587810434002</updated>
+      <workItem from="1587810444826" duration="1772000" />
+      <workItem from="1587812390614" duration="6396000" />
+      <workItem from="1588476991869" duration="5772000" />
+      <workItem from="1588489254180" duration="3055000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587811409993">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1587811409993" />
+    <state x="185" y="276" width="1350" height="638" maximized="true" key="DiffContextDialog" timestamp="1587814237000">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="185" y="276" width="1350" height="638" maximized="true" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1587814237000" />
+    <state x="549" y="154" key="FileChooserDialogImpl" timestamp="1587811597924">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587811597924" />
+    <state x="349" y="147" key="IDE.errors.dialog" timestamp="1587810809362">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1587810809362" />
+    <state x="270" y="55" key="SettingsEditor" timestamp="1587822912547">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587822912547" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1587814352294">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1587814352294" />
+    <state x="435" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1587812393818">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="435" y="237" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1587812393818" />
+    <state x="425" y="66" width="672" height="676" key="search.everywhere.popup" timestamp="1588478095035">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="66" width="672" height="676" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588478095035" />
+  </component>
+</project>
