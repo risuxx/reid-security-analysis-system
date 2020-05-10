@@ -2,39 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1b212f1-868b-4472-97c4-bd598241ab92" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/RSAS.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebStorm_html/.idea/WebStorm_html.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digital_adv/templates/img/adv_affine/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digital_adv/templates/img/adv_affine/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digital_adv/templates/img/adv_affine/2001_c1s1_000001_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digital_adv/templates/img/adv_affine/2001_c1s1_000012_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digital_adv/templates/img/adv_affine/2001_c2s1_000017_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digital_adv/templates/img/adv_affine/2001_c2s1_000029_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digital_adv/templates/img/adv_affine/2001_c3s1_000018_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digital_adv/templates/img/adv_affine/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digital_adv/templates/img/adv_affine/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digital_adv/templates/img/adv_affine/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digital_adv/templates/img/adv_affine/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digital_adv/templates/img/android.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digital_adv/templates/img/github.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digital_adv/templates/img/qq.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digital_adv/templates/img/qq.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digital_adv/templates/img/rectangle.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digital_adv/templates/img/tig.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digital_adv/templates/img/timg.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digital_adv/templates/index3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/rank-reid_linux.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rank-reid_linux.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digital_adv/templates/index_evaluate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digital_adv/templates/index_generate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digital_adv/templates/index_initial.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digital_adv/test_upload/market-pair-pretrain-withoutwarp.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digital_adv/test_upload/model.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebStorm_html/index - 副本 (2).html" beforeDir="false" afterPath="$PROJECT_DIR$/../WebStorm_html/index 2020-5.7.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/digital_adv/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/digital_adv/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/digital_adv/target_bobo.py" beforeDir="false" afterPath="$PROJECT_DIR$/digital_adv/target_bobo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digital_adv/templates/index - 副本.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/digital_adv/templates/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/digital_adv/templates/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/digital_adv/templates/index2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digital_adv/templates/index3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataset/bobo/mask/1502.npy" beforeDir="false" afterPath="$PROJECT_DIR$/../dataset/bobo/mask/1502.npy" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

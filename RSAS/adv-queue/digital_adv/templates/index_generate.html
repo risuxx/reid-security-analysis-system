@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>行人重识别安全性分析系统</title>
+<!--	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />-->
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/htmleaf-demo.css')}}" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/jquery.eeyellow.Timeline.css')}}" />
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+	<div class="htmleaf-container">
+		<header class="htmleaf-header">
+			<h1>行人重识别安全性分析系统 <span>A Security Analysis System for Person Re-identification</span></h1>
+		</header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="VivaTimeline">
+						<dl>
+<!--						#####################################预处理#############################3-->
+						<dt>预处理</dt>
+						<dd class="pos-right clearfix">
+							<div class="circ"></div>
+							<div class="time">Upload</div>
+							<div class="events" style="width:330px;">
+								<div class="events-header">数据集上传</div>
+								<div class="events-body" >
+									<div class="row" >
+										<div style="padding-bottom: 20px">请将模型重命名为model.h5，以zip格式压缩后上传</div>
+										<div id="dataset_name" style="padding-bottom: 20px; color:red;"></div>
+										<form method=post  enctype=multipart/form-data id="formdataset_sSubmit">
+											<label for="choose_dataset_file" class="btn btn-lg btn-primary" style="margin-right: 37px">选择模型</label>
+											<input id="choose_dataset_file" type=file name=file style="display:none">
+
+<!--											<label  class="btn btn-lg btn-primary" onclick="upload_model_submit">上传服务器</label>-->
+											<label for="upload_dataset" class="btn btn-lg btn-primary" >上传服务器</label>
+											<input id="upload_dataset" type=submit value=Upload style="display:none">	
+										</form>
+										<br>
+									</div>
+								</div>
+							</div>
+						</dd>
+						<dd class="pos-right clearfix">
+							<div class="circ"></div>
+							<div class="time">Mask</div>
+							<div class="events" style="width:500px;">
+								<div class="events-header">对抗性图案形状选择</div>
+								<div class="events-body">
+									<div class="row" >
+										<div style="padding-bottom: 20px">请选择一个蒙版形状，这是您生成的对抗性图案的形状</div>
+										<form class="form-horizontal"  method=psot enctype=multipart/form-data  id="mask_formSubmit">
+											<div class="Grid" style="padding-bottom: 10px">
+												<div class="Grid-cell" style="width:100px;" >
+													<img src="{{ url_for('static', filename='img/rectangle.jpg')}}" style="width: 70px;height: 70px;">
+													<div style="height: 10px"></div>
+													<input name="mask" value="Rectangle" type="radio"  checked="checked"> 长方形
+												</div>
+
+												<div class="Grid-cell" style="width:100px;" >
+													<img src="{{ url_for('static', filename='img/qq.jpg')}}" style="width: 70px;height:70px;">
+													<div style="height:10px"></div>
+												<input name="mask" value="QQ" type="radio"> QQ
+												</div>
+												<div class="Grid-cell"style="width:100px;" >
+													<img src="{{ url_for('static', filename='img/github.jpg')}}" style="width: 70px;height:70px;">
+													<div style="height: 10px"></div>
+												<input name="mask" value="Github" type="radio"> Github
+												</div>
+												<div class="Grid-cell"style="width:100px;" >
+													<img src="{{ url_for('static', filename='img/android.jpg')}}" style="width: 70px;height:70px;">
+													<div style="height: 10px"></div>
+													<input name="mask" value="Android" type="radio"> Android
+												</div>
+											</div>
+											<center style="padding-right: 35px;">
+												<label for="upload_mask" class="btn  btn-lg btn-primary">上传蒙版形状</label>
+												<input id="upload_mask" type=submit value=Upload style="display:none">
+											</center>
+										</form>
+									</div>
+								</div>
+							</div>
+						</dd>
+
+						<dd class="pos-right clearfix">
+							<div class="circ"></div>
+							<div class="time">Start</div>
+							<div class="events" style="width:200px;">
+								<div class="events-header">开始生成对抗性样本</div>
+								<div class="events-body">
+									<div class="row" >
+<!--										<form method=post enctype=multipart/form-data id="adv_start_submit">-->
+											<center style="padding-right: 35px;">
+											<label  class="btn btn-lg btn-success" style="width: 150px;" onclick="adv_start_submit()">启动</label>
+<!--											<input id="adv_start" type=submit value=Upload style="display:none">-->
+											</center>
+<!--										</form>-->
+									</div>
+								</div>
+							</div>
+						</dd>
+<!--						#####################################对抗性图案生成#############################3-->
+						<dt>对抗性图案生成</dt>
+						<dd class="pos-right clearfix">
+							<div class="circ"></div>
+							<div class="time">Dist</div>
+							<div class="events">
+								<div class="events-header">特征差异放大</div>
+								<div class="events-body">
+									<div class="row" >
+										<div>Content</div>
+										<div id="bar" style="width:1200px; height:600px;"></div>
+									</div>
+								</div>
+							</div>
+						</dd>
+						<dd class="pos-right clearfix">
+							<div class="circ"></div>
+
+							<div class="time">Loss</div>
+							<div class="events">
+								<div class="events-header">损失函数优化</div>
+								<div class="events-body">
+									<div class="row" >
+										<div id="dist" style="width:1200px; height:600px;"></div>
+									</div>
+								</div>
+							</div>
+						</dd>
+						<dd class="pos-right clearfix">
+							<div class="circ"></div>
+							<div class="time">Process</div>
+							<div class="events">
+								<div class="events-header">对抗样本生成过程</div>
+								<div class="events-body">
+									<div class="row" >
+										<div class="Grid" style="padding-bottom: 10px;padding-left:40px;">
+											<div class="Grid-cell" style="width:100px;" >
+												<img src="{{ url_for('static', filename=adv_photo0)}}" style="width: 150px;height: 270px;">
+												<div style="height: 10px;padding-left: 75px">1</div>
+											</div>
+
+											<div class="Grid-cell" style="width:100px;" >
+												<img src="{{ url_for('static', filename=adv_photo1)}}" style="width: 150px;height: 270px;">
+												<div style="height: 10px;padding-left: 75px">2</div>
+											</div>
+											<div class="Grid-cell" style="width:100px;" >
+												<img  src="{{ url_for('static', filename=adv_photo2)}}"  style="width: 150px;height: 270px;">
+												<div style="height: 10px;padding-left: 75px">3</div>
+											</div>
+											<div class="Grid-cell" style="width:100px;" >
+												<img   src="{{ url_for('static', filename=adv_photo3)}}" style="width: 150px;height: 270px;">
+												<div style="height: 10px;padding-left: 75px">4</div>
+											</div>
+											<div class="Grid-cell" style="width:100px;" >
+												<img   src="{{ url_for('static', filename=adv_photo4)}}" style="width: 150px;height: 270px;">
+												<div style="height: 10px;padding-left: 75px">5</div>
+											</div>
+											<div class="Grid-cell" style="width:100px;" >
+												<img   src="{{ url_for('static', filename=adv_photo5)}}"  style="width: 150px;height: 270px;">
+												<div style="height: 10px;padding-left: 75px">6</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+									</div>
+								</div>
+<!--								<div class="events-footer">-->
+<!--									123-->
+<!--								</div>-->
+							</div>
+						</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="http://libs.useso.com/js/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+	<script>window.jQuery || document.write('<script src="{{ url_for('static', filename='js/jquery-1.11.0.min.js')}}"><\/script>')</script>
+	<script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/jquery.eeyellow.Timeline.js')}}"></script>
+<!--	<script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>-->
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.VivaTimeline').vivaTimeline({
+				carousel: true,
+				carouselTime: 3000
+			});
+		});
+
+	</script>
+    <script>
+        var chart_bar = echarts.init(document.getElementById('bar'), 'white', {renderer: 'canvas'});
+		var chart_dist = echarts.init(document.getElementById('dist'), 'white', {renderer: 'canvas'});
+        var old_data = [];
+		var old_data_dist = [];
+        $(
+            function () {
+                fetchData(chart_bar);
+				fetch_dist_data(chart_dist);
+                setInterval(getDynamicData, 2000);
+            }
+        );
+
+        function fetchData() {
+            $.ajax({
+                type: "GET",
+                url: "/lineChart",
+                dataType: "json",
+                success: function (result) {
+                    chart_bar.setOption(result);
+                    old_data = chart_bar.getOption().series[0].data;
+                }
+            });
+        }
+        function fetch_dist_data() {
+            $.ajax({
+                type: "GET",
+                url: "/dist_Chart",
+                dataType: "json",
+                success: function (result) {
+                    chart_dist.setOption(result);
+                    old_data_dist = chart_dist.getOption().series[0].data;
+                }
+            });
+        }		
+
+        function getDynamicData() {
+            $.ajax({
+                type: "GET",
+                url: "/lineDynamicData",
+                dataType: "json",
+                success: function (result) {
+					//chart
+                    old_data.push([result.name, result.value]);
+                    chart_bar.setOption({
+                        series: [{data: old_data}]
+                    });
+					//dist
+					old_data_dist.push([result.name, result.value2]);
+                    chart_dist.setOption({
+                        series: [{data: old_data_dist}]
+                    });					
+                },
+				error:function(e){
+					window.location.href = "/adv_run";
+				}				
+            });
+        }
+    </script>
+<script>
+	$('#formdataset_sSubmit').submit(function (event) {
+		//首先验证文件格式
+		var fileName = $(this).find("input[name=file]").val();
+		if (fileName === '') {
+			alert('请选择您的行人重识别模型');
+			return false;
+		}
+		alert("即将开始上传，请勿操作，点击确定继续");
+		// mulitipart form,如文件上传类
+		var formData = new FormData(this);
+		$.ajax({
+			async: false,
+			type: "POST",
+			url: "/upload_model",
+			data: formData,
+			dataType: "JSON",
+			mimeType: "multipart/form-data",
+			contentType: false,
+			cache: false,
+			processData: false,
+			success: function (data) {
+				alert('上传模型成功');
+			},
+            error:function(e){
+				alert('上传模型失败');
+            }
+		});
+		return false;
+	});
+	$('#mask_formSubmit').submit(function (event) {
+		//首先验证文件格式
+		// var fileName = $(this).find("input[name=file]").val();
+		// if (fileName === '') {
+		// 	alert('请选择文件');
+		// 	return;
+		// }
+		// mulitipart form,如文件上传类
+		//alert('上传蒙版形状');
+		var formData = new FormData(this);
+		//var mask=formdata.get("mask")
+		//alert('选择'+mask+'上传');
+		$.ajax({
+			async: false,
+			type: "POST",
+			url: "/post_select_mask",
+			data: formData,
+			dataType: "JSON",
+			mimeType: "multipart/form-data",
+			contentType: false,
+			cache: false,
+			processData: false,
+			success: function (data) {
+				alert('上传蒙版形状成功');
+			},
+            error:function(e){
+				alert('上传蒙版形状失败');
+            }
+		});
+		return false;
+	});
+		function adv_start_submit(){
+		   	$.ajax({
+                type: "GET",
+                url: "/adv_start_submit",
+                dataType: "json",
+				success: function (data) {
+					alert('启动！');
+					window.location.href = "/adv_run";
+				},
+				error:function(e){
+					alert('启动失败');
+				}
+            });
+		}
+</script>
+</body>
+</html>
