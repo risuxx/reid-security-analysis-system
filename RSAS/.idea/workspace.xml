@@ -2,104 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd86dc8b-96d5-4157-8a3d-6241bf3b571b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/RSAS.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebStorm_html/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/WebStorm_html/.idea/WebStorm_html.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebStorm_html/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebStorm_html/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebStorm_html/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebStorm_html/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebStorm_html/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebStorm_html/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebStorm_html/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebStorm_html/js/bootstrap.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/adv-queue/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/baseline/market_softmax_pretrain.h5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/baseline/market_softmax_pretrain_f2.h5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/baseline_dis/market-pair-pretrain-withoutwarp.h5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/baseline_dis/market-pair-pretrain.h5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/baseline_dis/market_softmax_pretrain.h5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/baseline_mulitask/market_softmax_pretrain.h5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/baseline_mulitask/multi-task.h5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/gallery_f.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/components.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/css/htmleaf-demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/css/jquery.eeyellow.Timeline.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/fonts/icomoon.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/fonts/icomoon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/fonts/icomoon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/fonts/icomoon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/img/cat01.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/img/cat02.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/img/cat03.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/img/dog01.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/img/dog02.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/img/dog03.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/img/nature01.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/img/rabbit01.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/index - 副本.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/index2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/js/jquery-1.11.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/js/jquery.eeyellow.Timeline.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/macro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/nb_components.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/nb_jupyter_globe.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/nb_jupyter_lab.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/nb_jupyter_lab_tab.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/nb_jupyter_notebook.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/nb_jupyter_notebook_tab.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/nb_nteract.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/simple_chart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/simple_globe.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/simple_page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/simple_tab.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/pairtrain/market_pair_pretrain.h5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/pairtrain/market_pair_pretrain_epoch50.h5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/pretrained-model/resnet50_weights_tf_dim_ordering_tf_kernels_notop.h5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adv-queue/utils/mask_github.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyecharts-flask-demo/templates/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyecharts-flask-demo/templates/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyecharts-flask-demo/templates/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyecharts-flask-demo/templates/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyecharts-flask-demo/templates/css/htmleaf-demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyecharts-flask-demo/templates/css/jquery.eeyellow.Timeline.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyecharts-flask-demo/templates/fonts/icomoon.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyecharts-flask-demo/templates/fonts/icomoon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyecharts-flask-demo/templates/fonts/icomoon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyecharts-flask-demo/templates/fonts/icomoon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyecharts-flask-demo/templates/img/cat01.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyecharts-flask-demo/templates/img/cat02.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyecharts-flask-demo/templates/img/cat03.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyecharts-flask-demo/templates/img/dog01.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyecharts-flask-demo/templates/img/dog02.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyecharts-flask-demo/templates/img/dog03.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyecharts-flask-demo/templates/img/nature01.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyecharts-flask-demo/templates/img/rabbit01.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyecharts-flask-demo/templates/index - 副本.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyecharts-flask-demo/templates/index2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyecharts-flask-demo/templates/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyecharts-flask-demo/templates/js/jquery-1.11.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyecharts-flask-demo/templates/js/jquery.eeyellow.Timeline.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/reid-security-analysis-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/reid-security-analysis-system.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adv-queue/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/adv-queue/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adv-queue/.idea/rank-reid_linux.iml" beforeDir="false" afterPath="$PROJECT_DIR$/adv-queue/.idea/rank-reid_linux.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adv-queue/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/adv-queue/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adv-queue/digital_adv/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/adv-queue/digital_adv/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adv-queue/digital_adv/target_bobo.py" beforeDir="false" afterPath="$PROJECT_DIR$/adv-queue/digital_adv/target_bobo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyecharts-flask-demo/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyecharts-flask-demo/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adv-queue/digital_adv/templates/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/adv-queue/digital_adv/templates/index2.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +35,6 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/adv-queue/digital_adv" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -186,9 +101,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="RSAS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/adv-queue/digital_adv" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/adv-queue/digital_adv/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.target_bobo" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.app" />
       </list>
     </recent_temporary>

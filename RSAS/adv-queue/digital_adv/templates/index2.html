@@ -61,24 +61,24 @@
 										<div style="padding-bottom: 20px">请选择一个蒙版形状，这将会是您生成对抗性图案的形状</div>
 										<form class="form-horizontal" method="get" id="mask_formSubmit">
 											<div class="Grid" style="padding-bottom: 10px">
-												<div class="Grid-cell"style="width:100px;" >
-													<img src="img/rectangle.jpg" style="width: 70px;height: 70px;">
+												<div class="Grid-cell" style="width:100px;" >
+													<img src="{{ url_for('static', filename='img/rectangle.jpg')}}" style="width: 70px;height: 70px;">
 													<div style="height: 10px"></div>
 													<input name="mask" value="Rectangle" type="radio"  checked="checked"> 长方形
 												</div>
 
-												<div class="Grid-cell"style="width:100px;" >
-													<img src="img/qq.jpg" style="width: 70px;height:70px;">
+												<div class="Grid-cell" style="width:100px;" >
+													<img src="{{ url_for('static', filename='img/qq.jpg')}}" style="width: 70px;height:70px;">
 													<div style="height:10px"></div>
 												<input name="mask" value="QQ" type="radio"> QQ
 												</div>
 												<div class="Grid-cell"style="width:100px;" >
-													<img src="img/github.jpg" style="width: 70px;height:70px;">
+													<img src="{{ url_for('static', filename='img/github.jpg')}}" style="width: 70px;height:70px;">
 													<div style="height: 10px"></div>
 												<input name="mask" value="Github" type="radio"> Github
 												</div>
 												<div class="Grid-cell"style="width:100px;" >
-													<img src="img/android.jpg" style="width: 70px;height:70px;">
+													<img src="{{ url_for('static', filename='img/android.jpg')}}" style="width: 70px;height:70px;">
 													<div style="height: 10px"></div>
 													<input name="mask" value="Android" type="radio"> Android
 												</div>
@@ -101,28 +101,28 @@
 									<div class="row" >
 										<div class="Grid" style="padding-bottom: 10px;padding-left:40px;">
 											<div class="Grid-cell" style="width:100px;" >
-												<img src="img/adv_affine/3.jpg" style="width: 150px;height: 270px;">
+												<img src="{{ url_for('static', filename='img/adv_affine/3.jpg')}}" style="width: 150px;height: 270px;">
 												<div style="height: 10px;padding-left: 75px">1</div>
 											</div>
 
 											<div class="Grid-cell" style="width:100px;" >
-												<img src="img/adv_affine/4.jpg" style="width: 150px;height: 270px;">
+												<img src="{{ url_for('static', filename='img/adv_affine/4.jpg')}}" style="width: 150px;height: 270px;">
 												<div style="height: 10px;padding-left: 75px">2</div>
 											</div>
 											<div class="Grid-cell" style="width:100px;" >
-												<img  src="img/adv_affine/1.jpg" style="width: 150px;height: 270px;">
+												<img  src="{{ url_for('static', filename='img/adv_affine/1.jpg')}}"  style="width: 150px;height: 270px;">
 												<div style="height: 10px;padding-left: 75px">3</div>
 											</div>
 											<div class="Grid-cell" style="width:100px;" >
-												<img  src="img/adv_affine/2.jpg" style="width: 150px;height: 270px;">
+												<img   src="{{ url_for('static', filename='img/adv_affine/2.jpg')}}" style="width: 150px;height: 270px;">
 												<div style="height: 10px;padding-left: 75px">4</div>
 											</div>
 											<div class="Grid-cell" style="width:100px;" >
-												<img  src="img/adv_affine/5.jpg" style="width: 150px;height: 270px;">
+												<img   src="{{ url_for('static', filename='img/adv_affine/5.jpg')}}" style="width: 150px;height: 270px;">
 												<div style="height: 10px;padding-left: 75px">5</div>
 											</div>
 											<div class="Grid-cell" style="width:100px;" >
-												<img  src="img/adv_affine/6.jpg" style="width: 150px;height: 270px;">
+												<img   src="{{ url_for('static', filename='img/adv_affine/6.jpg')}}"  style="width: 150px;height: 270px;">
 												<div style="height: 10px;padding-left: 75px">6</div>
 											</div>
 										</div>
@@ -269,14 +269,13 @@
 		</div>
 	</div>
 	
-</body>
-<script src="http://libs.useso.com/js/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
-<script>window.jQuery || document.write('<script src="{{ url_for('static', filename='js/jquery-1.11.0.min.js')}}"><\/script>')</script>
-<script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
-<script src="{{ url_for('static', filename='js/jquery.eeyellow.Timeline.js')}}"></script>
+	<script src="http://libs.useso.com/js/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+	<script>window.jQuery || document.write('<script src="{{ url_for('static', filename='js/jquery-1.11.0.min.js')}}"><\/script>')</script>
+	<script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/jquery.eeyellow.Timeline.js')}}"></script>
 <!--	<script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>-->
-<script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
-<script type="text/javascript">
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+	<script type="text/javascript">
 		$(document).ready(function(){
 			$('.VivaTimeline').vivaTimeline({
 				carousel: true,
@@ -284,8 +283,8 @@
 			});
 		});
 
-</script>
-<script>
+	</script>
+    <script>
         var chart = echarts.init(document.getElementById('bar'), 'white', {renderer: 'canvas'});
         var old_data = [];
         $(
@@ -321,95 +320,6 @@
             });
         }
 
-</script>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('.VivaTimeline').vivaTimeline({
-			carousel: true,
-			carouselTime: 3000
-		});
-	});
-	$('#choose_dataset_file').on('change',function(){
-		// output raw value of file input
-		$('#dataset_name').html($(this).val());
-
-		// or, manipulate it further with regex etc.
-		var filename = $(this).val();
-		// .. do your magic
-		filename="您选择了："+filename+"<br/>请点击上传按钮上传数据集"
-
-		$('#dataset_name').html(filename);
-	});
-	//假设每隔5秒发送一次请求
-	window.onload = function () {
-		// getApi();
-	};
-	// function getApi() {
-	// 	//设置时间 5-秒  1000-毫秒  这里设置你自己想要的时间
-	// 	setTimeout(getApi, 3000);
-	// 	// alert('你好，世界!');
-	// 	$.ajax({
-	// 		url: 'AAAAA',
-	// 		type: 'get',
-	// 	})
-	// };
-	$('#formdataset_sSubmit').submit(function (event) {
-		//首先验证文件格式
-		var fileName = $(this).find("input[name=file]").val();
-		if (fileName === '') {
-			alert('请选择数据集');
-			return;
-		}
-		// mulitipart form,如文件上传类
-		var formData = new FormData(this);
-		$.ajax({
-			async: false,
-			type: "POST",
-			url: "/upload",
-			data: formData,
-			dataType: "JSON",
-			mimeType: "multipart/form-data",
-			contentType: false,
-			cache: false,
-			processData: false,
-			success: function (data) {
-				if (data.success) {
-					layer.alert("上传成功")
-				} else {
-					layer.alert(data.error)
-				}
-			}
-		});
-		return false;
-	});
-	$('#mask_formSubmit').submit(function (event) {
-		//首先验证文件格式
-		// var fileName = $(this).find("input[name=file]").val();
-		// if (fileName === '') {
-		// 	alert('请选择文件');
-		// 	return;
-		// }
-		// mulitipart form,如文件上传类
-		var formData = new FormData(this);
-		$.ajax({
-			async: false,
-			type: "POST",
-			url: "/upload",
-			data: formData,
-			dataType: "JSON",
-			mimeType: "multipart/form-data",
-			contentType: false,
-			cache: false,
-			processData: false,
-			success: function (data) {
-				if (data.success) {
-					layer.alert("上传成功")
-				} else {
-					layer.alert(data.error)
-				}
-			}
-		});
-		return false;
-	});
-</script>
+    </script>
+</body>
 </html>

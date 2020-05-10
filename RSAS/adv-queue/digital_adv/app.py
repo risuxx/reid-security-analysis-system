@@ -28,15 +28,32 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 res = None
 process=0
 
+# def line_base() -> Line:
+#     line = (
+#         Line()
+#         .add_xaxis(["{}".format(i) for i in range(10)])
+#         .add_yaxis(
+#             series_name="",
+#             y_axis=[0],
+#             is_smooth=False,
+#             label_opts=opts.LabelOpts(is_show=True),
+#         )
+#         .set_global_opts(
+#             title_opts=opts.TitleOpts(title="动态数据"),
+#             xaxis_opts=opts.AxisOpts(type_="value"),
+#             yaxis_opts=opts.AxisOpts(type_="value"),
+#         )
+#     )
+#     return line
 def line_base() -> Line:
     line = (
         Line()
         .add_xaxis(["{}".format(i) for i in range(10)])
         .add_yaxis(
             series_name="",
-            y_axis=[0],
-            is_smooth=False,
-            label_opts=opts.LabelOpts(is_show=True),
+            y_axis=[randrange(50, 80) for _ in range(10)],
+            is_smooth=True,
+            label_opts=opts.LabelOpts(is_show=False),
         )
         .set_global_opts(
             title_opts=opts.TitleOpts(title="动态数据"),
@@ -45,7 +62,6 @@ def line_base() -> Line:
         )
     )
     return line
-
 
 @app.route("/")
 def index():
@@ -60,19 +76,23 @@ def get_line_chart():
 
 idx = 1
 
-
 @app.route("/lineDynamicData")
 def update_line_data():
     global idx
-    global res
     idx = idx + 1
-    # 在主线程中打印
-    # while True:
-    if res.not_empty:
-        tmp_res = res.get()
-        print(tmp_res)
-        time.sleep(1)
-    return jsonify({"name": idx, "value": (format(tmp_res[1],'.3f'))})
+    return jsonify({"name": idx, "value": randrange(50, 80)})
+# @app.route("/lineDynamicData")
+# def update_line_data():
+#     global idx
+#     global res
+#     idx = idx + 1
+#     # 在主线程中打印
+#     # while True:
+#     if res.not_empty:
+#         tmp_res = res.get()
+#         print(tmp_res)
+#         time.sleep(1)
+#     return jsonify({"name": idx, "value": (format(tmp_res[1],'.3f'))})
 
 def allowed_file(filename):   # 验证上传的文件名是否符合要求，文件名必须带点并且符合允许上传的文件类型要求，两者都满足则返回 true
     return '.' in filename and \
@@ -101,6 +121,7 @@ def upload_file():
                  <input type=submit value=Upload>
             </form>
             '''
+
 @app.route("/post_select_mask", methods=['GET', 'POST'])
 def post_select_mask():
     global process
@@ -113,13 +134,12 @@ def adv_start():
     global res
     graph = tf.get_default_graph()
     # with tf.variable_scope('base_model'):
-    net = load_model('../../adv-queue/baseline_dis/market-pair-pretrain-withoutwarp.h5')
+    net = load_model('../baseline_dis/market-pair-pretrain-withoutwarp.h5')
 
     gallery_path = '../../dataset' + '/Market-1501/bounding_box_test'
     probe_path = '../../dataset' + '/bobo/resize'
     mask_path = '../../dataset' + '/bobo/mask'
     adv_path = '../../dataset' + '/bobo/tar_adv'
-
     noise_path = '../../dataset' +'/bobo/tar_noise'
 
 
@@ -141,5 +161,5 @@ def adv_start():
 
 
 if __name__ == "__main__":
-    adv_start()
+    # adv_start()
     app.run()
