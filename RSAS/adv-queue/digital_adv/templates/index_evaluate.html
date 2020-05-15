@@ -89,49 +89,7 @@
 								</div>
 							</div>
 						</dd>
-						<dd class="pos-right clearfix">
-							<div class="circ"></div>
-							<div class="time">Affine</div>
-							<div class="events">
-								<div class="events-header">仿射变换</div>
-								<div class="events-body">
-									<div class="row" >
-										<div class="Grid" style="padding-bottom: 10px;padding-left:40px;">
-											<div class="Grid-cell" style="width:100px;" >
-												<img src="{{ url_for('static', filename='img/adv_affine/3.jpg')}}" style="width: 150px;height: 270px;">
-												<div style="height: 10px;padding-left: 75px">1</div>
-											</div>
 
-											<div class="Grid-cell" style="width:100px;" >
-												<img src="{{ url_for('static', filename='img/adv_affine/4.jpg')}}" style="width: 150px;height: 270px;">
-												<div style="height: 10px;padding-left: 75px">2</div>
-											</div>
-											<div class="Grid-cell" style="width:100px;" >
-												<img  src="{{ url_for('static', filename='img/adv_affine/1.jpg')}}"  style="width: 150px;height: 270px;">
-												<div style="height: 10px;padding-left: 75px">3</div>
-											</div>
-											<div class="Grid-cell" style="width:100px;" >
-												<img   src="{{ url_for('static', filename='img/adv_affine/2.jpg')}}" style="width: 150px;height: 270px;">
-												<div style="height: 10px;padding-left: 75px">4</div>
-											</div>
-											<div class="Grid-cell" style="width:100px;" >
-												<img   src="{{ url_for('static', filename='img/adv_affine/5.jpg')}}" style="width: 150px;height: 270px;">
-												<div style="height: 10px;padding-left: 75px">5</div>
-											</div>
-											<div class="Grid-cell" style="width:100px;" >
-												<img   src="{{ url_for('static', filename='img/adv_affine/6.jpg')}}"  style="width: 150px;height: 270px;">
-												<div style="height: 10px;padding-left: 75px">6</div>
-											</div>
-										</div>
-									</div>
-									<div class="row">
-									</div>
-								</div>
-<!--								<div class="events-footer">-->
-<!--									123-->
-<!--								</div>-->
-							</div>
-						</dd>
 						<dd class="pos-right clearfix">
 							<div class="circ"></div>
 							<div class="time">Start</div>
@@ -155,28 +113,33 @@
 							<div class="circ"></div>
 							<div class="time">Dist</div>
 							<div class="events">
-								<div class="events-header">特征差异放大</div>
+								<div class="events-header">训练参数量化</div>
 								<div class="events-body">
 									<div class="row" >
-										<div>Content</div>
-										<div id="bar" style="width:1200px; height:600px;"></div>
+										<div>特征差异放大</div>
+										<div id="dist" style="width:1200px; height:500px;"></div>
 									</div>
+									<div class="row" >
+										<div>Loss损失函数优化</div>
+										<div id="bar" style="width:1200px; height:500px;"></div>
+									</div>
+								</div>
+								<div class="events-footer">
+<!--									123-->
 								</div>
 							</div>
 						</dd>
-						<dd class="pos-right clearfix">
-							<div class="circ"></div>
+<!--						<dd class="pos-right clearfix">-->
+<!--							<div class="circ"></div>-->
 
-							<div class="time">Loss</div>
-							<div class="events">
-								<div class="events-header">损失函数优化</div>
-								<div class="events-body">
-									<div class="row" >
-										<div>物理环境建模效果展示，没有则不展示</div>
-									</div>
-								</div>
-							</div>
-						</dd>
+<!--							<div class="time">Loss</div>-->
+<!--							<div class="events">-->
+<!--								<div class="events-header">损失函数优化</div>-->
+<!--								<div class="events-body">-->
+
+<!--								</div>-->
+<!--							</div>-->
+<!--						</dd>-->
 						<dd class="pos-right clearfix">
 							<div class="circ"></div>
 							<div class="time">Process</div>
@@ -186,28 +149,28 @@
 									<div class="row" >
 										<div class="Grid" style="padding-bottom: 10px;padding-left:40px;">
 											<div class="Grid-cell" style="width:100px;" >
-												<img src="{{ url_for('static', filename='img/adv_affine/3.jpg')}}" style="width: 150px;height: 270px;">
+												<img id="adv_photo0" src="{{ url_for('static', filename=adv_photo0)}}" style="width: 150px;height: 270px;">
 												<div style="height: 10px;padding-left: 75px">1</div>
 											</div>
 
 											<div class="Grid-cell" style="width:100px;" >
-												<img src="{{ url_for('static', filename='img/adv_affine/4.jpg')}}" style="width: 150px;height: 270px;">
+												<img id="adv_photo1" src="{{ url_for('static', filename=adv_photo1)}}" style="width: 150px;height: 270px;">
 												<div style="height: 10px;padding-left: 75px">2</div>
 											</div>
 											<div class="Grid-cell" style="width:100px;" >
-												<img  src="{{ url_for('static', filename='img/adv_affine/1.jpg')}}"  style="width: 150px;height: 270px;">
+												<img id="adv_photo2" src="{{ url_for('static', filename=adv_photo2)}}"  style="width: 150px;height: 270px;">
 												<div style="height: 10px;padding-left: 75px">3</div>
 											</div>
 											<div class="Grid-cell" style="width:100px;" >
-												<img   src="{{ url_for('static', filename='img/adv_affine/2.jpg')}}" style="width: 150px;height: 270px;">
+												<img id="adv_photo3"  src="{{ url_for('static', filename=adv_photo3)}}" style="width: 150px;height: 270px;">
 												<div style="height: 10px;padding-left: 75px">4</div>
 											</div>
 											<div class="Grid-cell" style="width:100px;" >
-												<img   src="{{ url_for('static', filename='img/adv_affine/5.jpg')}}" style="width: 150px;height: 270px;">
+												<img id="adv_photo4"  src="{{ url_for('static', filename=adv_photo4)}}" style="width: 150px;height: 270px;">
 												<div style="height: 10px;padding-left: 75px">5</div>
 											</div>
 											<div class="Grid-cell" style="width:100px;" >
-												<img   src="{{ url_for('static', filename='img/adv_affine/6.jpg')}}"  style="width: 150px;height: 270px;">
+												<img id="adv_photo5"  src="{{ url_for('static', filename=adv_photo5)}}"  style="width: 150px;height: 270px;">
 												<div style="height: 10px;padding-left: 75px">6</div>
 											</div>
 										</div>
@@ -252,10 +215,14 @@
 											表明了行人重识别在要求前n张中正确行人图片时的准确度。</div>
 										<br/><br/>
 										<div>您的模型安全性评估各项指标如下所示</div>
-										<div>mAP=</div>
-										<div>rank1 acc=</div>
-										<div>rank5 acc=</div>
-										<div>rank10 acc=</div>
+										<p id="rank1" style="color:red"></p>
+										<p id="rank5" style="color:red"></p>
+										<p id="rank10" style="color:red"></p>
+										<p id="mAP" style="color:red"></p>
+<!--										<div >mAP= </div>-->
+<!--										<div>rank1 acc=</div>-->
+<!--										<div>rank5 acc=</div>-->
+<!--										<div>rank10 acc=</div>-->
 									</div>
 								</div>
 							</div>
@@ -267,7 +234,8 @@
 								<div class="events-header">分析与建议</div>
 								<div class="events-body">
 									<div class="row" >
-										<div>以上指标中，mAP低于理想值XX、rankn低于理想值XX，您的行人重识别模型存在很大的安全隐患</div>
+
+										<div id="evaluate_result">以上指标中，mAP低于理想值XX、rankn低于理想值XX，您的行人重识别模型存在很大的安全隐患</div>
 <!--										<div>以上指标中，mAP低于理想值XX，您的行人重识别模型存在较大的安全隐患</div>-->
 <!--										<div>以上指标中，rankn低于理想值XX，您的行人重识别模型存在较大的安全隐患</div>-->
 <!--										<div>以上指标中，mAP高于理想值XX、rankn高于理想值XX。您的行人重识别模型安全性能良好</div>-->
@@ -313,12 +281,17 @@
 
 	</script>
     <script>
-        var chart = echarts.init(document.getElementById('bar'), 'white', {renderer: 'canvas'});
+        var chart_bar = echarts.init(document.getElementById('bar'), 'white', {renderer: 'canvas'});
+		var chart_dist = echarts.init(document.getElementById('dist'), 'white', {renderer: 'canvas'});
         var old_data = [];
+		var old_data_dist = [];
         $(
             function () {
-                fetchData(chart);
-                setInterval(getDynamicData, 2000);
+                fetchData(chart_bar);
+				fetch_dist_data(chart_dist);
+				evaluate_calc();
+				evaluate_result()
+                //setInterval(getDynamicData, 2000);
             }
         );
 
@@ -328,11 +301,22 @@
                 url: "/lineChart",
                 dataType: "json",
                 success: function (result) {
-                    chart.setOption(result);
-                    old_data = chart.getOption().series[0].data;
+                    chart_bar.setOption(result);
+                    old_data = chart_bar.getOption().series[0].data;
                 }
             });
         }
+        function fetch_dist_data() {
+            $.ajax({
+                type: "GET",
+                url: "/dist_Chart",
+                dataType: "json",
+                success: function (result) {
+                    chart_dist.setOption(result);
+                    old_data_dist = chart_dist.getOption().series[0].data;
+                }
+            });
+        }	
 
         function getDynamicData() {
             $.ajax({
@@ -344,6 +328,42 @@
                     chart.setOption({
                         series: [{data: old_data}]
                     });
+                }
+            });
+        }
+        function getDynamicData() {
+            $.ajax({
+                type: "GET",
+                url: "/lineDynamicData",
+                dataType: "json",
+                success: function (result) {
+                    old_data.push([result.name, result.value]);
+                    chart.setOption({
+                        series: [{data: old_data}]
+                    });
+                }
+            });
+        }	
+        function evaluate_calc() {
+            $.ajax({
+                type: "GET",
+                url: "/evaluate_calc",
+                dataType: "json",
+                success: function (result) {
+					$("#mAP").text("mAP="+result.mAP+"%");
+					$("#rank1").text("rank1="+result.rank1+"%");
+					$("#rank5").text("rank5="+result.rank5+"%");
+					$("#rank10").text("rank10="+result.rank10+"%");
+                }
+            });
+        }
+        function evaluate_result() {
+            $.ajax({
+                type: "GET",
+                url: "/evaluate_result",
+                dataType: "json",
+                success: function (result) {
+					$("#evaluate_result").text(result.evaluate_result);
                 }
             });
         }
@@ -416,6 +436,7 @@
                 dataType: "json",
 				success: function (data) {
 					alert('启动！');
+					window.location.href = "/adv_run";
 				},
 				error:function(e){
 					alert('启动失败');

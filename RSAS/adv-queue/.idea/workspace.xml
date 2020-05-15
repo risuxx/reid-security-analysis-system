@@ -2,19 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1b212f1-868b-4472-97c4-bd598241ab92" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/digital_adv/templates/index_evaluate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digital_adv/templates/index_generate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digital_adv/templates/index_initial.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digital_adv/test_upload/market-pair-pretrain-withoutwarp.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digital_adv/test_upload/model.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebStorm_html/index - 副本 (2).html" beforeDir="false" afterPath="$PROJECT_DIR$/../WebStorm_html/index 2020-5.7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebStorm_html/hh.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebStorm_html/jquery-1.11.0.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebStorm_html/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebStorm_html/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/digital_adv/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/digital_adv/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/digital_adv/templates/index - 副本.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/digital_adv/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/digital_adv/templates/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/digital_adv/templates/index2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/digital_adv/templates/index3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dataset/bobo/mask/1502.npy" beforeDir="false" afterPath="$PROJECT_DIR$/../dataset/bobo/mask/1502.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digital_adv/target_bobo.py" beforeDir="false" afterPath="$PROJECT_DIR$/digital_adv/target_bobo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digital_adv/templates/img/adv_affine/1502_c8l00f0.png" beforeDir="false" afterPath="$PROJECT_DIR$/digital_adv/templates/img/adv_affine/1502_c8l00f0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digital_adv/templates/img/adv_affine/1502_c8l02f0.png" beforeDir="false" afterPath="$PROJECT_DIR$/digital_adv/templates/img/adv_affine/1502_c8l02f0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digital_adv/templates/img/adv_affine/1502_c8l03f0.png" beforeDir="false" afterPath="$PROJECT_DIR$/digital_adv/templates/img/adv_affine/1502_c8l03f0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digital_adv/templates/img/adv_affine/1502_c8l04f0.png" beforeDir="false" afterPath="$PROJECT_DIR$/digital_adv/templates/img/adv_affine/1502_c8l04f0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digital_adv/templates/img/adv_affine/1502_c8l08f0.png" beforeDir="false" afterPath="$PROJECT_DIR$/digital_adv/templates/img/adv_affine/1502_c8l08f0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digital_adv/templates/img/adv_affine/1502_c8l10f0.png" beforeDir="false" afterPath="$PROJECT_DIR$/digital_adv/templates/img/adv_affine/1502_c8l10f0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digital_adv/templates/index_evaluate.html" beforeDir="false" afterPath="$PROJECT_DIR$/digital_adv/templates/index_evaluate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digital_adv/templates/index_generate.html" beforeDir="false" afterPath="$PROJECT_DIR$/digital_adv/templates/index_generate.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -198,8 +199,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.app" />
-        <item itemvalue="Python.test" />
         <item itemvalue="Python.target_bobo" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.wear2_target_market" />
         <item itemvalue="Python.wear2_untarget" />
       </list>

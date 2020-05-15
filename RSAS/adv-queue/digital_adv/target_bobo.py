@@ -1,3 +1,5 @@
+import shutil
+
 import tensorflow as tf
 from keras.models import Model
 from keras.models import load_model
@@ -242,7 +244,7 @@ def adv(graph, net, mask, generator, batch_size, res, adv_index, adv_path,mask_p
             if iteration % 10 == 0:
                 print(iteration, [dist1_np+dist2_np, dist3_np, tv_np, peak_np, total_loss_np])
 
-            if iteration % 50 == 0:# 每隔50次保存一次adv结果
+            if iteration % 10 == 0:# 每隔50次保存一次adv结果
                 tmp_noise = sess.run(noise)
                 saved_noise = tmp_noise.reshape(550, 220, 3)
                 scipy.misc.imsave('noise.jpg', saved_noise)
@@ -256,6 +258,18 @@ def adv(graph, net, mask, generator, batch_size, res, adv_index, adv_path,mask_p
                 imgs, infos = load_raw(probe_path, img_names)
                 save_adv(adv_index, imgs, trans_all, mask, tmp_noise, img_names, adv_path)
                 res.put("the adv have been saved")
+                # shutil.copyfile('../../dataset/bobo/tar_adv/1502_c8l00f0.png',
+                #                 'templates/img/adv_affine/1502_c8l00f0.png')
+                # shutil.copyfile('../../dataset/bobo/tar_adv/1502_c8l02f0.png',
+                #                 'templates/img/adv_affine/1502_c8l02f0.png')
+                # shutil.copyfile('../../dataset/bobo/tar_adv/1502_c8l04f0.png',
+                #                 'templates/img/adv_affine/1502_c8l04f0.png')
+                # shutil.copyfile('../../dataset/bobo/tar_adv/1502_c8l08f0.png',
+                #                 'templates/img/adv_affine/1502_c8l08f0.png')
+                # shutil.copyfile('../../dataset/bobo/tar_adv/1502_c8l10f0.png',
+                #                 'templates/img/adv_affine/1502_c8l10f0.png')
+                # shutil.copyfile('../../dataset/bobo/tar_adv/1502_c8l03f0.png',
+                #                 'templates/img/adv_affine/1502_c8l03f0.png')
 
 
             if dist1_np+dist2_np-dist3_np > best_dist:

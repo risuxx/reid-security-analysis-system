@@ -37,6 +37,12 @@ Dist_y=[]
 adv_photo=['img/adv_affine/3.jpg', 'img/adv_affine/4.jpg',
            'img/adv_affine/1.jpg','img/adv_affine/2.jpg',
            'img/adv_affine/5.jpg','img/adv_affine/6.jpg']#展示的adv图片
+adv_photo[0] = "/img/adv_affine/1502_c8l00f0.png"
+adv_photo[1] = "/img/adv_affine/1502_c8l02f0.png"
+adv_photo[2] = "/img/adv_affine/1502_c8l04f0.png"
+adv_photo[3] = "/img/adv_affine/1502_c8l08f0.png"
+adv_photo[4] = "/img/adv_affine/1502_c8l10f0.png"
+adv_photo[5] = "/img/adv_affine/1502_c8l03f0.png"
 res = None
 process=0
 
@@ -166,7 +172,7 @@ def adv_start():
 
     return jsonify({"success": 200})  # 返回成功的信息
 
-########################################以上为预处理，以下为
+########################################以上为预处理，以下为生成
 #折线图
 def line_base() -> Line:
     line = (
@@ -237,6 +243,7 @@ def update_line_data():
     if res.not_empty:
         tmp=res.get()
         if "adv" in tmp:
+            print("==========================>adv in tmp")
             shutil.copyfile('../../dataset/bobo/tar_adv/1502_c8l00f0.png', 'templates/img/adv_affine/1502_c8l00f0.png')
             shutil.copyfile('../../dataset/bobo/tar_adv/1502_c8l02f0.png', 'templates/img/adv_affine/1502_c8l02f0.png')
             shutil.copyfile('../../dataset/bobo/tar_adv/1502_c8l04f0.png', 'templates/img/adv_affine/1502_c8l04f0.png')
@@ -244,35 +251,90 @@ def update_line_data():
             shutil.copyfile('../../dataset/bobo/tar_adv/1502_c8l10f0.png', 'templates/img/adv_affine/1502_c8l10f0.png')
             shutil.copyfile('../../dataset/bobo/tar_adv/1502_c8l03f0.png', 'templates/img/adv_affine/1502_c8l03f0.png')
 
-            adv_photo[0]="/img/adv_affine/1502_c8l00f0.png"
-            adv_photo[1]="/img/adv_affine/1502_c8l02f0.png"
-            adv_photo[2]="/img/adv_affine/1502_c8l04f0.png"
-            adv_photo[3]="/img/adv_affine/1502_c8l08f0.png"
-            adv_photo[4]="/img/adv_affine/1502_c8l10f0.png"
-            adv_photo[5]="/img/adv_affine/1502_c8l03f0.png"
+            # adv_photo[0]="/img/adv_affine/1502_c8l00f0.png"
+            # adv_photo[1]="/img/adv_affine/1502_c8l02f0.png"
+            # adv_photo[2]="/img/adv_affine/1502_c8l04f0.png"
+            # adv_photo[3]="/img/adv_affine/1502_c8l08f0.png"
+            # adv_photo[4]="/img/adv_affine/1502_c8l10f0.png"
+            # adv_photo[5]="/img/adv_affine/1502_c8l03f0.png"
 
             # return jsonify({"success": 200})
             # return jsonify({"error": 1001, "msg": "刷新"})  # 刷新图片
             # return render_template('index_generate.html', adv_photo1='img/adv_affine/3.jpg', adv_photo2='img/adv_affine/3.jpg',
             #                        adv_photo3='img/adv_affine/3.jpg',adv_photo4='img/adv_affine/3.jpg.jpg', adv_photo5='img/adv_affine/3.jpg',
             #                        adv_photo6='img/adv_affine/3.jpg')
-            return render_template('index_generate.html', adv_photo1=adv_photo[0], adv_photo2=adv_photo[1],
-                                   adv_photo3=adv_photo[2], adv_photo4=adv_photo[3], adv_photo5=adv_photo[4],
-                                   adv_photo6=adv_photo[5])
+            return jsonify({"end": 2})
+            # return render_template('index_generate.html', adv_photo0=adv_photo[0], adv_photo1=adv_photo[1],
+            #                        adv_photo2=adv_photo[2], adv_photo3=adv_photo[3], adv_photo4=adv_photo[4],adv_photo5=adv_photo[5])
+        elif "advend" in tmp:
+            print("==========================>adv end")
+            return jsonify({"end": 1})
         else:
             idx = idx + 1
             print(tmp)
             Loss_x.append(idx) #保存在数组中
             Loss_y.append(format(tmp[5],'.3f')) #保存在数组中
-            Dist_y.append(format(tmp[1]*1000,'.0f'))
+            Dist_y.append(format(tmp[1]*10,'.1f'))
             # time.sleep(1)
-            return jsonify({"name": idx, "value": (format(tmp[5],'.3f')),"value2": (format(tmp[1]*1000,'.0f'))})
+            return jsonify({"end": 0, "name": idx, "value": (format(tmp[5],'.3f')),"value2": (format(tmp[1]*10,'.1f'))})
+
+
+@app.route('/adv_run_photo_update', methods=['GET', 'POST'])
+def adv_run_photo_update():
+    import base64
+    imageid = request.values.get("imageid") #获得imageid
+    # print(imageid)
+    img_local_path="templates/"+adv_photo[int(imageid)]
+    # img_local_path="templates/img/adv_affine/1502_c8l03f0.png"
+    f = open(img_local_path, 'rb')
+    base64_str = base64.b64encode(f.read())
+    # with open(img_local_path, 'r') as img_f:
+    #     img_stream = img_f.read()
+    #     img_stream = base64.b64encode(img_stream)
+    # print(base64_str)
+    print("==========================>adv_run_photo_update"+imageid)
+    return jsonify({"status": 200,"base64_str":base64_str})
+
+@app.route('/test_if',methods=['GET','POST'])
+def test_if():
+    imageid = request.values.get("imageid") #获得imageid
+    print(imageid)
+    if int(imageid) == 1:
+        return jsonify({"end": 0})
+    elif int(imageid) == 2:
+        return jsonify({"end": 1})
+    else:
+        return jsonify({"end": 2})
 
 @app.route("/adv_run")
 def adv_run():
-    return render_template('index_generate.html', adv_photo1=adv_photo[0], adv_photo2=adv_photo[1],
-                           adv_photo3=adv_photo[2], adv_photo4=adv_photo[3],adv_photo5=adv_photo[4],adv_photo6=adv_photo[5])
+    return render_template('index_generate.html', adv_photo0=adv_photo[0], adv_photo1=adv_photo[1],
+                           adv_photo2=adv_photo[2], adv_photo3=adv_photo[3],adv_photo4=adv_photo[4],adv_photo5=adv_photo[5])
 
+########################################以上为生成，以下为评估
+@app.route("/adv_evaluate")
+def adv_evaluate():
+    return render_template('index_evaluate.html', adv_photo0=adv_photo[0], adv_photo1=adv_photo[1],
+                           adv_photo2=adv_photo[2], adv_photo3=adv_photo[3],adv_photo4=adv_photo[4],adv_photo5=adv_photo[5])
+
+@app.route("/evaluate_calc")
+def evaluate_calc():
+    import random
+    rank1=format(random.randint(0,100)/10,'.1f')
+    rank5=format(random.randint(0,400)/10+float(rank1),'.1f')
+    rank10=format(random.randint(0,500)/10+float(rank5),'.1f')
+    mAP=(format(random.randint(100000,900000)/100000,'.6f'))
+    return  jsonify({"rank1": rank1,"rank5": rank5,"rank10": rank10,"mAP": mAP})
+
+@app.route("/evaluate_result")
+def evaluate_result():
+    import random
+    # rank1=(format(random.randint(0,1),'.1f'))
+    # rank5=(format(random.randint(0,5),'.1f'))
+    # rank10=(format(random.randint(0,10),'.1f'))
+    # mAP=(format(random.randint(100000,900000)/100000,'.6f'))
+    evaluate_result="以上指标中，mAP低于理想值XX、rankn低于理想值XX，您的行人重识别模型存在很大的安全隐患"
+    return  jsonify({"evaluate_result": evaluate_result})
 
 if __name__ == "__main__":
     # adv_start()

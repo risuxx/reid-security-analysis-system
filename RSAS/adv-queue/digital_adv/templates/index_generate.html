@@ -113,28 +113,33 @@
 							<div class="circ"></div>
 							<div class="time">Dist</div>
 							<div class="events">
-								<div class="events-header">特征差异放大</div>
+								<div class="events-header">训练参数量化</div>
 								<div class="events-body">
 									<div class="row" >
-										<div>Content</div>
-										<div id="bar" style="width:1200px; height:600px;"></div>
+										<div>特征差异放大</div>
+										<div id="dist" style="width:1200px; height:500px;"></div>
 									</div>
+									<div class="row" >
+										<div>Loss损失函数优化</div>
+										<div id="bar" style="width:1200px; height:500px;"></div>
+									</div>
+								</div>
+								<div class="events-footer">
+<!--									123-->
 								</div>
 							</div>
 						</dd>
-						<dd class="pos-right clearfix">
-							<div class="circ"></div>
+<!--						<dd class="pos-right clearfix">-->
+<!--							<div class="circ"></div>-->
 
-							<div class="time">Loss</div>
-							<div class="events">
-								<div class="events-header">损失函数优化</div>
-								<div class="events-body">
-									<div class="row" >
-										<div id="dist" style="width:1200px; height:600px;"></div>
-									</div>
-								</div>
-							</div>
-						</dd>
+<!--							<div class="time">Loss</div>-->
+<!--							<div class="events">-->
+<!--								<div class="events-header">损失函数优化</div>-->
+<!--								<div class="events-body">-->
+
+<!--								</div>-->
+<!--							</div>-->
+<!--						</dd>-->
 						<dd class="pos-right clearfix">
 							<div class="circ"></div>
 							<div class="time">Process</div>
@@ -144,28 +149,28 @@
 									<div class="row" >
 										<div class="Grid" style="padding-bottom: 10px;padding-left:40px;">
 											<div class="Grid-cell" style="width:100px;" >
-												<img src="{{ url_for('static', filename=adv_photo0)}}" style="width: 150px;height: 270px;">
+												<img id="adv_photo0" src="{{ url_for('static', filename=adv_photo0)}}" style="width: 150px;height: 270px;">
 												<div style="height: 10px;padding-left: 75px">1</div>
 											</div>
 
 											<div class="Grid-cell" style="width:100px;" >
-												<img src="{{ url_for('static', filename=adv_photo1)}}" style="width: 150px;height: 270px;">
+												<img id="adv_photo1" src="{{ url_for('static', filename=adv_photo1)}}" style="width: 150px;height: 270px;">
 												<div style="height: 10px;padding-left: 75px">2</div>
 											</div>
 											<div class="Grid-cell" style="width:100px;" >
-												<img  src="{{ url_for('static', filename=adv_photo2)}}"  style="width: 150px;height: 270px;">
+												<img id="adv_photo2" src="{{ url_for('static', filename=adv_photo2)}}"  style="width: 150px;height: 270px;">
 												<div style="height: 10px;padding-left: 75px">3</div>
 											</div>
 											<div class="Grid-cell" style="width:100px;" >
-												<img   src="{{ url_for('static', filename=adv_photo3)}}" style="width: 150px;height: 270px;">
+												<img id="adv_photo3"  src="{{ url_for('static', filename=adv_photo3)}}" style="width: 150px;height: 270px;">
 												<div style="height: 10px;padding-left: 75px">4</div>
 											</div>
 											<div class="Grid-cell" style="width:100px;" >
-												<img   src="{{ url_for('static', filename=adv_photo4)}}" style="width: 150px;height: 270px;">
+												<img id="adv_photo4"  src="{{ url_for('static', filename=adv_photo4)}}" style="width: 150px;height: 270px;">
 												<div style="height: 10px;padding-left: 75px">5</div>
 											</div>
 											<div class="Grid-cell" style="width:100px;" >
-												<img   src="{{ url_for('static', filename=adv_photo5)}}"  style="width: 150px;height: 270px;">
+												<img id="adv_photo5"  src="{{ url_for('static', filename=adv_photo5)}}"  style="width: 150px;height: 270px;">
 												<div style="height: 10px;padding-left: 75px">6</div>
 											</div>
 										</div>
@@ -242,21 +247,61 @@
                 url: "/lineDynamicData",
                 dataType: "json",
                 success: function (result) {
-					//chart
-                    old_data.push([result.name, result.value]);
-                    chart_bar.setOption({
-                        series: [{data: old_data}]
-                    });
-					//dist
-					old_data_dist.push([result.name, result.value2]);
-                    chart_dist.setOption({
-                        series: [{data: old_data_dist}]
-                    });					
-                },
-				error:function(e){
-					window.location.href = "/adv_run";
-				}				
+                	if(result.end==1)
+                	{
+                		console.log("========================> adv_end  ");
+                		window.location.href = "/adv_evaluate"
+                	}
+                	else if (result.end==2)
+                	{
+                	    console.log("========================> update_photo_All  ");
+                		update_photo_All();
+                	}
+                	else{
+						//chart
+						old_data.push([result.name, result.value]);
+						chart_bar.setOption({
+							series: [{data: old_data}]
+						});
+						//dist
+						old_data_dist.push([result.name, result.value2]);
+						chart_dist.setOption({
+							series: [{data: old_data_dist}]
+						});
+                	}
+
+                }
+				//error:function(e){
+					//update_photo_All();
+					//window.location.href = "/adv_run";
+				//}
             });
+        }
+        function update_photo_All(){
+        	update_photo(0);
+         	update_photo(1);
+         	update_photo(2);
+         	update_photo(3);
+         	update_photo(4);
+         	update_photo(5);
+        }
+        function update_photo(image_idx){
+			var image_pic="#adv_photo"+image_idx
+        	$.ajax({
+			   type:'post',
+				 data:{"imageid": image_idx}	, //参数
+				 dataType:'json',
+				 url: "/adv_run_photo_update",
+				 success: function(data) {
+					 //将图片的Base64编码设置给src
+					 console.log(" 将图片的Base64编码设置给src  ");
+					 $(image_pic).attr("src","data:image/png;base64,"+data.base64_str);
+					 console.log(" END  ");
+				 },
+				// error:function(data){
+				//	 alert('响应失败！');
+				 //}
+			  });
         }
     </script>
 <script>

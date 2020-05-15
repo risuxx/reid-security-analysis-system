@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+<img id="adv_photo-1" alt="Base64 encoded image" width="100" height="100" />
+<p id="adv_photo1">这是段落。</p>
+<p id="adv_photo2">这是另一个段落。</p>
+<script src="jquery-1.11.0.min.js"></script>
+<center >
+    <button onclick="adv_start_submit()">启动</button>
+</center>
+<script>
+    function adv_start_submit(){
+        $.ajax({
+            type: "POST",
+            url: "/adv_start_submit",
+            data:{"imageid": 1}, //参数
+            dataType: "json",
+            success: function (data) {
+                if(data.end==1)
+                {
+                    console.log("111111 ");
+                }
+                if(data.end==2)
+                {
+                    console.log("222222 ");
+                }
+                if(data.end==3)
+                {
+                    console.log("333333 ");
+                }
+            },
+            error:function(e){
+                alert('启动失败');
+            }
+        });
+    }
+    function update_photo(image_idx){
+        var image_pic="#adv_photo"+image_idx;
+        //$(image_pic).data;
+        $(image_pic).text("Hello world!");
+        // $.ajax({
+        //     type:'post',
+        //     data:{"imageid": image_idx}	, //参数
+        //     dataType:'json',
+        //     url: "/adv_run_photo_update",
+        //     success: function(data) {
+        //         //将图片的Base64编码设置给src
+        //         $("#ImagePic").attr("src","data:image/png;base64,"+data);
+        //     },
+        //     // error:function(data){
+        //     //	 alert('响应失败！');
+        //     //}
+        // });
+    }
+</script>
+</body>
+</html>

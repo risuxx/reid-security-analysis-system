@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f04aaaad-e488-428e-b4a6-2492aec4c015" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/adv_affine/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/rectangle.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/jquery.eeyellow.Timeline.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/jquery.eeyellow.Timeline.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hh.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jquery-1.11.0.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../adv-queue/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../adv-queue/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../adv-queue/digital_adv/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../adv-queue/digital_adv/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../adv-queue/digital_adv/templates/img/adv_affine/1502_c8l00f0.png" beforeDir="false" afterPath="$PROJECT_DIR$/../adv-queue/digital_adv/templates/img/adv_affine/1502_c8l00f0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../adv-queue/digital_adv/templates/img/adv_affine/1502_c8l02f0.png" beforeDir="false" afterPath="$PROJECT_DIR$/../adv-queue/digital_adv/templates/img/adv_affine/1502_c8l02f0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../adv-queue/digital_adv/templates/img/adv_affine/1502_c8l03f0.png" beforeDir="false" afterPath="$PROJECT_DIR$/../adv-queue/digital_adv/templates/img/adv_affine/1502_c8l03f0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../adv-queue/digital_adv/templates/img/adv_affine/1502_c8l04f0.png" beforeDir="false" afterPath="$PROJECT_DIR$/../adv-queue/digital_adv/templates/img/adv_affine/1502_c8l04f0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../adv-queue/digital_adv/templates/img/adv_affine/1502_c8l08f0.png" beforeDir="false" afterPath="$PROJECT_DIR$/../adv-queue/digital_adv/templates/img/adv_affine/1502_c8l08f0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../adv-queue/digital_adv/templates/img/adv_affine/1502_c8l10f0.png" beforeDir="false" afterPath="$PROJECT_DIR$/../adv-queue/digital_adv/templates/img/adv_affine/1502_c8l10f0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../adv-queue/digital_adv/templates/index_generate.html" beforeDir="false" afterPath="$PROJECT_DIR$/../adv-queue/digital_adv/templates/index_generate.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,14 +35,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\桌面\学科\论文\信安大赛\信安2020.1.17\reid-security-analysis-system\RSAS\WebStorm_html" />
       <recent name="E:\桌面\学科\论文\信安大赛\信安2020.1.17\reid-security-analysis-system\RSAS\WebStorm_html\img" />
       <recent name="E:\桌面\学科\论文\信安大赛\信安2020.1.17\reid-security-analysis-system\RSAS\WebStorm_html\img\adv_affine" />
-      <recent name="E:\桌面\学科\论文\信安大赛\信安2020.1.17\reid-security-analysis-system\RSAS\WebStorm_html" />
       <recent name="E:\桌面\学科\论文\信安大赛\信安2020.1.17\reid-security-analysis-system\RSAS\WebStorm_html\js" />
       <recent name="E:\桌面\学科\论文\信安大赛\信安2020.1.17\reid-security-analysis-system\RSAS\WebStorm_html\css" />
     </key>
@@ -64,6 +73,7 @@
       <workItem from="1587812390614" duration="6396000" />
       <workItem from="1588476991869" duration="5772000" />
       <workItem from="1588489254180" duration="3055000" />
+      <workItem from="1589538927769" duration="4437000" />
     </task>
     <servers />
   </component>
