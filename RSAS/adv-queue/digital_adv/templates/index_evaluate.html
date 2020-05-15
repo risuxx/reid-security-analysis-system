@@ -193,6 +193,12 @@
 								<div class="events-body">
 									<div class="row" >
 										<div>这是最终生成的对抗性图案，您可以将这个图案打印出来，用于物理域的安全性评估</div>
+										<center>
+											<img id="advPattern"  src="{{ url_for('static', filename=advPattern)}}"
+												 style="width: 300px;height: 300px;" onclick="download()">
+											<label  class="btn btn-lg btn-primary" onclick="download()">下载</label>
+<!--											<div style="height: 300px;padding-left: 300px"></div>-->
+										</center>
 									</div>
 								</div>
 							</div>
@@ -366,6 +372,18 @@
 					$("#evaluate_result").text(result.evaluate_result);
                 }
             });
+        }
+        function download() {
+        	window.location.replace("http://127.0.0.1:5000/download")
+        	//window.location.href = "/download"
+            //$.ajax({
+            //    type: "GET",
+            //    url: "/download",
+            //    dataType: "json",
+            //    success: function (result) {
+			//		//$("#evaluate_result").text(result.evaluate_result);
+            //    }
+            //});
         }
     </script>
 <script>

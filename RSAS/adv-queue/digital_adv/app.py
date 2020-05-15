@@ -2,7 +2,7 @@ import shutil
 from random import randrange
 
 from flask.json import jsonify
-from flask import Flask, render_template
+from flask import Flask, render_template, make_response
 from pyecharts import options as opts
 from pyecharts.charts import Line
 
@@ -314,8 +314,10 @@ def adv_run():
 ########################################以上为生成，以下为评估
 @app.route("/adv_evaluate")
 def adv_evaluate():
+    shutil.copyfile("noise.jpg", 'templates/img/adv_affine/noise.jpg')
     return render_template('index_evaluate.html', adv_photo0=adv_photo[0], adv_photo1=adv_photo[1],
-                           adv_photo2=adv_photo[2], adv_photo3=adv_photo[3],adv_photo4=adv_photo[4],adv_photo5=adv_photo[5])
+                           adv_photo2=adv_photo[2], adv_photo3=adv_photo[3],adv_photo4=adv_photo[4],
+                           adv_photo5=adv_photo[5],advPattern="/img/adv_affine/noise.jpg")
 
 @app.route("/evaluate_calc")
 def evaluate_calc():
@@ -335,6 +337,15 @@ def evaluate_result():
     # mAP=(format(random.randint(100000,900000)/100000,'.6f'))
     evaluate_result="以上指标中，mAP低于理想值XX、rankn低于理想值XX，您的行人重识别模型存在很大的安全隐患"
     return  jsonify({"evaluate_result": evaluate_result})
+
+@app.route("/download", methods=['GET'])
+def download():
+    # 此处的filepath是文件的路径，但是文件必须存储在static文件夹下， 比如images\test.jpg
+    f = open("noise.jpg", 'rb')
+    response = make_response(f.read())
+    response.headers['Content-Type'] = 'application/octet-stream'
+    response.headers['Content-Disposition'] = 'attachment;filename="{0}"'.format("noise.jpg")
+    return response
 
 if __name__ == "__main__":
     # adv_start()
