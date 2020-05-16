@@ -24,7 +24,10 @@
     width: 2px;
     margin-left: -1px;
     content: '';
-    background-color: #ccd1d9
+    /*这是时间线的配色*/
+    /*background-color: #ccd1d9;*/
+    /*background-color: #ac2925;*/
+    background-color: rgb(255, 255, 255);
 }
 
 .VivaTimeline dl dt {
@@ -38,7 +41,9 @@
     font-size: 20px;
     color: #fff;
     text-align: center;
-    background-color: #aab2bd;
+    /*是日期大框的的配色*/
+    /*background-color: #aab2bd;*/
+    background-color: rgb(254, 216, 0);
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px
@@ -57,8 +62,10 @@
     width: 22px;
     height: 22px;
     margin-left: -11px;
-    background-color: #4fc1e9;
-    border: 4px solid #f5f7fa;
+    /*圆圈的配色*/
+    /*圆框边框原来的颜色 #f5f7fa;*/
+    background-color: rgb(254, 217, 0);
+    border: 4px solid rgb(254, 217, 0);
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%
@@ -71,7 +78,8 @@
     display: inline-block;
     width: 100px;
     padding: 10px 20px;
-    color: #4fc1e9
+    /*时间的颜色*/
+    color: rgb(255, 255, 255);
 }
 
 .VivaTimeline dl dd .events {
@@ -80,7 +88,9 @@
     width: 103%;
     padding: 10px 0 0;
     margin-top: 31px;
-    background-color: #CCC;
+    /*每个功能的上下框颜色*/
+    /*background-color: #CCC;*/
+    background-color: rgb(255, 255, 255);
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px
@@ -113,7 +123,10 @@
 .VivaTimeline dl dd .events .events-body {
     overflow: hidden;
     zoom: 1;
-    background-color: #EEE;
+    /*background-color: #EEE;*/
+    /*每个功能的框颜色*/
+    /*background-color: #CCC;*/
+    background-color: rgb(255, 255, 255);
     padding: 10px;
     padding-left: 30px;
 
@@ -136,7 +149,9 @@
     padding: 0;
 }
 .VivaTimeline dl dd .events .events-footer ol li {
-    background: #32b487;
+    /*background: #32b487;*/
+    /*滚动小圆圈配色*/
+    background: rgb(231, 230, 228);
     border-radius: 5px;
     margin: 10px;
     display: inline-block;

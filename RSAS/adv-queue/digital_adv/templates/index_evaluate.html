@@ -29,20 +29,25 @@
 						<dd class="pos-right clearfix">
 							<div class="circ"></div>
 							<div class="time">Upload</div>
-							<div class="events" style="width:330px;">
-								<div class="events-header">数据集上传</div>
+							<div class="events" style="width:660px;">
+								<div class="events-header" style="color:rgb(0, 168, 74);">模型上传</div>
 								<div class="events-body" >
 									<div class="row" >
-										<div style="padding-bottom: 20px">请将模型重命名为model.h5，以zip格式压缩后上传</div>
+										<div style="padding-bottom: 20px;text-align:center;margin：auto;">请将模型重命名为model.h5，以zip格式压缩后上传</div>
 										<div id="dataset_name" style="padding-bottom: 20px; color:red;"></div>
-										<form method=post  enctype=multipart/form-data id="formdataset_sSubmit">
-											<label for="choose_dataset_file" class="btn btn-lg btn-primary" style="margin-right: 37px">选择模型</label>
-											<input id="choose_dataset_file" type=file name=file style="display:none">
+										<div style="margin：auto;">
+											<form method=post  enctype=multipart/form-data id="formdataset_sSubmit">
+												<center  style="padding-right: 35px;">
+												<label for="choose_dataset_file" class="btn btn-lg btn-success" style="margin-right: 37px">选择模型</label>
+												<input id="choose_dataset_file" type=file name=file style="display:none">
 
-<!--											<label  class="btn btn-lg btn-primary" onclick="upload_model_submit">上传服务器</label>-->
-											<label for="upload_dataset" class="btn btn-lg btn-primary" >上传服务器</label>
-											<input id="upload_dataset" type=submit value=Upload style="display:none">	
-										</form>
+	<!--											<label  class="btn btn-lg btn-primary" onclick="upload_model_submit">上传服务器</label>-->
+
+													<label for="upload_dataset" class="btn btn-lg btn-success" >上传服务器</label>
+													<input id="upload_dataset" type=submit value=Upload style="display:none">
+												</center>
+											</form>
+										</div>
 										<br>
 									</div>
 								</div>
@@ -51,13 +56,13 @@
 						<dd class="pos-right clearfix">
 							<div class="circ"></div>
 							<div class="time">Mask</div>
-							<div class="events" style="width:500px;">
-								<div class="events-header">对抗性图案形状选择</div>
+							<div class="events" style="width:660px;">
+								<div class="events-header" style="color:rgb(0, 168, 74);">对抗性图案形状选择</div>
 								<div class="events-body">
 									<div class="row" >
-										<div style="padding-bottom: 20px">请选择一个蒙版形状，这是您生成的对抗性图案的形状</div>
+										<div style="padding-bottom: 20px;text-align:center;margin：auto;">请选择一个蒙版形状，这是您生成的对抗性图案的形状</div>
 										<form class="form-horizontal"  method=psot enctype=multipart/form-data  id="mask_formSubmit">
-											<div class="Grid" style="padding-bottom: 10px">
+											<div class="Grid" style="padding-left:30px;padding-bottom: 10px;margin：auto;">
 												<div class="Grid-cell" style="width:100px;" >
 													<img src="{{ url_for('static', filename='img/rectangle.jpg')}}" style="width: 70px;height: 70px;">
 													<div style="height: 10px"></div>
@@ -81,7 +86,7 @@
 												</div>
 											</div>
 											<center style="padding-right: 35px;">
-												<label for="upload_mask" class="btn  btn-lg btn-primary">上传蒙版形状</label>
+												<label for="upload_mask" class="btn  btn-lg btn-success">确定上传蒙版形状</label>
 												<input id="upload_mask" type=submit value=Upload style="display:none">
 											</center>
 										</form>
@@ -89,12 +94,11 @@
 								</div>
 							</div>
 						</dd>
-
 						<dd class="pos-right clearfix">
 							<div class="circ"></div>
 							<div class="time">Start</div>
-							<div class="events" style="width:200px;">
-								<div class="events-header">开始生成对抗性样本</div>
+							<div class="events" style="width:660px;">
+								<div class="events-header" style="color:rgb(0, 168, 74);">开始生成对抗性样本</div>
 								<div class="events-body">
 									<div class="row" >
 <!--										<form method=post enctype=multipart/form-data id="adv_start_submit">-->
@@ -143,7 +147,7 @@
 						<dd class="pos-right clearfix">
 							<div class="circ"></div>
 							<div class="time">Process</div>
-							<div class="events">
+							<div class="events" >
 								<div class="events-header">对抗样本生成过程</div>
 								<div class="events-body">
 									<div class="row" >
@@ -188,16 +192,18 @@
 						<dd class="pos-right clearfix">
 							<div class="circ"></div>
 							<div class="time">advPattern</div>
-							<div class="events">
+							<div class="events" style="width:660px;">
 								<div class="events-header">生成的对抗性图案</div>
 								<div class="events-body">
 									<div class="row" >
-										<div>这是最终生成的对抗性图案，您可以将这个图案打印出来，用于物理域的安全性评估</div>
+										<div>下图为最终生成的对抗性图案，您可以将这个图案打印出来，用于物理域的安全性评估</div>
 										<center>
 											<img id="advPattern"  src="{{ url_for('static', filename=advPattern)}}"
 												 style="width: 300px;height: 300px;" onclick="download()">
-											<label  class="btn btn-lg btn-primary" onclick="download()">下载</label>
-<!--											<div style="height: 300px;padding-left: 300px"></div>-->
+											<center style="padding-right: 35px;">
+												<label  class="btn btn-lg btn-primary" onclick="download()">下载</label>
+	<!--											<div style="height: 300px;padding-left: 300px"></div>-->
+											</center>
 										</center>
 									</div>
 								</div>
@@ -206,18 +212,19 @@
 						<dd class="pos-right clearfix">
 							<div class="circ"></div>
 							<div class="time">Evaluate</div>
-							<div class="events"  style="width:700px;">
+							<div class="events"  style="width:660px;">
 								<div class="events-header">安全性指标评估</div>
 								<div class="events-body">
 									<div class="row" >
 										<div>我们以下面两个指标来评估您模型的安全性：</div>
-										<div>平均检索精度（mean Average Precision）:
-											mAP是更加全面衡量行人重识别算法效果的指标，
+<!--										<p>   </p>-->
+										<div>平均检索精度（mean Average Precision）:<br>
+											mAP是全面衡量行人重识别算法效果的指标，<br>
 											他反应检索的人在底库中的所有正确图片排在结果队列前面的程度，
 											而不仅是首位命中。</div>
 										<br/>
-										<div>rankn:
-											搜索结果中最靠前，即置信度最高的n张图，有正确结果的概率,
+										<div>rank-n:<br>
+											搜索结果中最靠前，即置信度最高的n张图，有正确结果的概率。<br>
 											表明了行人重识别在要求前n张中正确行人图片时的准确度。</div>
 										<br/><br/>
 										<div>您的模型安全性评估各项指标如下所示</div>
@@ -236,12 +243,13 @@
 						<dd class="pos-right clearfix">
 							<div class="circ"></div>
 							<div class="time">Analysis</div>
-							<div class="events" style="width:400px;">
+							<div class="events" style="width:660px;">
 								<div class="events-header">分析与建议</div>
 								<div class="events-body">
 									<div class="row" >
 
-										<div id="evaluate_result">以上指标中，mAP低于理想值XX、rankn低于理想值XX，您的行人重识别模型存在很大的安全隐患</div>
+										<div id="evaluate_result1"></div>
+										<div id="evaluate_result2"></div>
 <!--										<div>以上指标中，mAP低于理想值XX，您的行人重识别模型存在较大的安全隐患</div>-->
 <!--										<div>以上指标中，rankn低于理想值XX，您的行人重识别模型存在较大的安全隐患</div>-->
 <!--										<div>以上指标中，mAP高于理想值XX、rankn高于理想值XX。您的行人重识别模型安全性能良好</div>-->
@@ -369,7 +377,9 @@
                 url: "/evaluate_result",
                 dataType: "json",
                 success: function (result) {
-					$("#evaluate_result").text(result.evaluate_result);
+                	//evaluate_result=result.evaluate_result.replace(/[\n\r]/g,'<br>')
+					$("#evaluate_result1").text(result.evaluate_result1);
+					$("#evaluate_result2").text(result.evaluate_result2);
                 }
             });
         }

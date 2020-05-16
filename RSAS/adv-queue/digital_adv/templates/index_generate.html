@@ -29,20 +29,25 @@
 						<dd class="pos-right clearfix">
 							<div class="circ"></div>
 							<div class="time">Upload</div>
-							<div class="events" style="width:330px;">
-								<div class="events-header">数据集上传</div>
+							<div class="events" style="width:660px;">
+								<div class="events-header" style="color:rgb(0, 168, 74);">模型上传</div>
 								<div class="events-body" >
 									<div class="row" >
-										<div style="padding-bottom: 20px">请将模型重命名为model.h5，以zip格式压缩后上传</div>
+										<div style="padding-bottom: 20px;text-align:center;margin：auto;">请将模型重命名为model.h5，以zip格式压缩后上传</div>
 										<div id="dataset_name" style="padding-bottom: 20px; color:red;"></div>
-										<form method=post  enctype=multipart/form-data id="formdataset_sSubmit">
-											<label for="choose_dataset_file" class="btn btn-lg btn-primary" style="margin-right: 37px">选择模型</label>
-											<input id="choose_dataset_file" type=file name=file style="display:none">
+										<div style="margin：auto;">
+											<form method=post  enctype=multipart/form-data id="formdataset_sSubmit">
+												<center  style="padding-right: 35px;">
+												<label for="choose_dataset_file" class="btn btn-lg btn-success" style="margin-right: 37px">选择模型</label>
+												<input id="choose_dataset_file" type=file name=file style="display:none">
 
-<!--											<label  class="btn btn-lg btn-primary" onclick="upload_model_submit">上传服务器</label>-->
-											<label for="upload_dataset" class="btn btn-lg btn-primary" >上传服务器</label>
-											<input id="upload_dataset" type=submit value=Upload style="display:none">	
-										</form>
+	<!--											<label  class="btn btn-lg btn-primary" onclick="upload_model_submit">上传服务器</label>-->
+
+													<label for="upload_dataset" class="btn btn-lg btn-success" >上传服务器</label>
+													<input id="upload_dataset" type=submit value=Upload style="display:none">
+												</center>
+											</form>
+										</div>
 										<br>
 									</div>
 								</div>
@@ -51,13 +56,13 @@
 						<dd class="pos-right clearfix">
 							<div class="circ"></div>
 							<div class="time">Mask</div>
-							<div class="events" style="width:500px;">
-								<div class="events-header">对抗性图案形状选择</div>
+							<div class="events" style="width:660px;">
+								<div class="events-header" style="color:rgb(0, 168, 74);">对抗性图案形状选择</div>
 								<div class="events-body">
 									<div class="row" >
-										<div style="padding-bottom: 20px">请选择一个蒙版形状，这是您生成的对抗性图案的形状</div>
+										<div style="padding-bottom: 20px;text-align:center;margin：auto;">请选择一个蒙版形状，这是您生成的对抗性图案的形状</div>
 										<form class="form-horizontal"  method=psot enctype=multipart/form-data  id="mask_formSubmit">
-											<div class="Grid" style="padding-bottom: 10px">
+											<div class="Grid" style="padding-left:30px;padding-bottom: 10px;margin：auto;">
 												<div class="Grid-cell" style="width:100px;" >
 													<img src="{{ url_for('static', filename='img/rectangle.jpg')}}" style="width: 70px;height: 70px;">
 													<div style="height: 10px"></div>
@@ -81,7 +86,7 @@
 												</div>
 											</div>
 											<center style="padding-right: 35px;">
-												<label for="upload_mask" class="btn  btn-lg btn-primary">上传蒙版形状</label>
+												<label for="upload_mask" class="btn  btn-lg btn-success">确定上传蒙版形状</label>
 												<input id="upload_mask" type=submit value=Upload style="display:none">
 											</center>
 										</form>
@@ -89,12 +94,11 @@
 								</div>
 							</div>
 						</dd>
-
 						<dd class="pos-right clearfix">
 							<div class="circ"></div>
 							<div class="time">Start</div>
-							<div class="events" style="width:200px;">
-								<div class="events-header">开始生成对抗性样本</div>
+							<div class="events" style="width:660px;">
+								<div class="events-header" style="color:rgb(0, 168, 74);">开始生成对抗性样本</div>
 								<div class="events-body">
 									<div class="row" >
 <!--										<form method=post enctype=multipart/form-data id="adv_start_submit">-->

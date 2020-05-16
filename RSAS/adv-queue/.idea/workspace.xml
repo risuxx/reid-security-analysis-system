@@ -4,7 +4,11 @@
     <list default="true" id="f1b212f1-868b-4472-97c4-bd598241ab92" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/digital_adv/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/digital_adv/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digital_adv/templates/css/htmleaf-demo.css" beforeDir="false" afterPath="$PROJECT_DIR$/digital_adv/templates/css/htmleaf-demo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digital_adv/templates/css/jquery.eeyellow.Timeline.css" beforeDir="false" afterPath="$PROJECT_DIR$/digital_adv/templates/css/jquery.eeyellow.Timeline.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/digital_adv/templates/index_evaluate.html" beforeDir="false" afterPath="$PROJECT_DIR$/digital_adv/templates/index_evaluate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digital_adv/templates/index_generate.html" beforeDir="false" afterPath="$PROJECT_DIR$/digital_adv/templates/index_generate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digital_adv/templates/index_initial.html" beforeDir="false" afterPath="$PROJECT_DIR$/digital_adv/templates/index_initial.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

@@ -335,8 +335,11 @@ def evaluate_result():
     # rank5=(format(random.randint(0,5),'.1f'))
     # rank10=(format(random.randint(0,10),'.1f'))
     # mAP=(format(random.randint(100000,900000)/100000,'.6f'))
-    evaluate_result="以上指标中，mAP低于理想值XX、rankn低于理想值XX，您的行人重识别模型存在很大的安全隐患"
-    return  jsonify({"evaluate_result": evaluate_result})
+    mAP="90%"
+    rank="87%"
+    evaluate_result1="以上指标中，mAP低于理想值"+mAP+"、rankn低于理想值"+rank+"，"
+    evaluate_result2="您的行人重识别模型存在很大的安全隐患，仍需继续改进！"
+    return  jsonify({"evaluate_result1": evaluate_result1,"evaluate_result2": evaluate_result2})
 
 @app.route("/download", methods=['GET'])
 def download():

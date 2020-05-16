@@ -46,7 +46,9 @@ body, html { font-size: 100%; 	padding: 0; margin: 0;}
 }
 
 body{
-	background: #494A5F;
+	/*这是最大的背景色*/
+	/*background: #494A5F;*/
+	background-color: rgb(0, 167, 74) ;
 	font-family: "Microsoft YaHei","宋体","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif, FreeSans, Arimo;
 }
 a{color: #2fa0ec;text-decoration: none;outline: none;}
@@ -74,10 +76,14 @@ a:hover,a:focus{color:#74777b;}
 	padding: 1em 190px 1em;
 	letter-spacing: -1px;
 	text-align: center;
-	background: #66677c;
+	/*头部的颜色*/
+	/*background: #66677c;*/
+	background-color: rgb(255, 255, 255) ;
 }
 .htmleaf-header h1 {
-	color: #D5D6E2;
+	/*大字体颜色*/
+	/*color: #D5D6E2;*/
+	color:rgb(0, 168, 74);
 	font-weight: 600;
 	font-size: 2em;
 	line-height: 1;
@@ -90,7 +96,9 @@ a:hover,a:focus{color:#74777b;}
 	font-size: 60%;
 	font-weight: 400;
 	padding: 0.8em 0 0.5em 0;
-	color: #c3c8cd;
+	/*英文标题颜色*/
+	/*color: #c3c8cd;*/
+	/*color:rgb(255, 231, 3);*/
 }
 /*nav*/
 .htmleaf-demo a{color: #fff;text-decoration: none;}
